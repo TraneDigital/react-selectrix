@@ -52,7 +52,7 @@ export const createTag = ( tag ) => {
 				} );
 			};
 
-			const onAppendTagResult = onAppendTag(tag, resolve, reject);
+			const onAppendTagResult = onAppendTag( tag, resolve, reject );
 			if ( onAppendTagResult && onAppendTagResult.then ) {
 				onAppendTagResult
 					.then( resolve )
@@ -708,7 +708,7 @@ export const moveFocus = ( direction ) => {
 					targetIndex = 'tag';
 				}
 				else {
-					targetIndex = index > 0 || (placeHolderInside || searchBoxInside) ? index - 1 : 0;
+					targetIndex = index > 0 || ( placeHolderInside || searchBoxInside ) ? index - 1 : 0;
 				}
 			}
 			else {
@@ -720,7 +720,7 @@ export const moveFocus = ( direction ) => {
 				targetIndex = 'tag';
 			}
 			else {
-				targetIndex = direction === 'up' ? options.length - 1 : (placeHolderInside || searchBoxInside) ? -1 : 0;
+				targetIndex = direction === 'up' ? options.length - 1 : ( placeHolderInside || searchBoxInside ) ? -1 : 0;
 			}
 		}
 
@@ -766,7 +766,7 @@ export const focusItem = ( index, mouseEvent ) => {
 			options = [ ... options ].filter( o => ! selected.includes( o.key ) );
 		}
 
-		if( options[ index ] || ( index === -1 && (state.settings.placeHolderInside || state.settings.searchBoxInside) ) ) {
+		if( options[ index ] || ( index === -1 && ( state.settings.placeHolderInside || state.settings.searchBoxInside ) ) ) {
 			dispatch( {
 				type: FOCUS_ITEM,
 				item: index !== -1 ? options[ index ] : { key: 'default' },

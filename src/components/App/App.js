@@ -130,7 +130,7 @@ export default class App extends React.Component {
 	buildOptionClassName( option ) {
 		let className = 'rs-option';
 		if( option.hasOwnProperty( 'classes' ) ) {
-			className += ' '+option.classes.join(' ');
+			className += ' '+option.classes.join( ' ' );
 		}
 		if( option.hasOwnProperty( 'disabled' ) && option.disabled === true ) {
 			className += ' disabled';
@@ -189,7 +189,7 @@ export default class App extends React.Component {
 								<NoResults options={ options } />
 								{ settings.searchBoxInside && ( ! ajax.active || ! ajax.fetching && ajax.minLength <= queryString ) &&
 								<li
-									className={ this.buildOptionClassName( { key: 'default', classes: ['rs-searchable-box'] } ) }
+									className={ this.buildOptionClassName( { key: 'default', classes: [ 'rs-searchable-box' ] } ) }
 									onMouseEnter={ () => ! this.props.mouseEventLocked ? this.props.focusItem( -1, true ) : '' }
 								>
 									{ <Searchable /> }

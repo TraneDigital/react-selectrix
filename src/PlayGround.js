@@ -48,12 +48,16 @@ export default class PlayGround extends React.Component {
 
 	appendTag = ( tag ) => {
 		const { options } = this.state;
-		return new Promise(( resolve, rejects) => {
-			setTimeout(() => {
-				this.setState( { options: [ ...options, { value: tag, label: tag } ] } );
-				resolve();
+		return new Promise( ( resolve, reject ) => {
+			setTimeout( () => {
+				try {
+					this.setState( { options: [ ...options, { value: tag, label: tag } ] } );
+					resolve();
+				} catch ( e ) {
+					reject( e );
+				}
 			}, 500 );
-		});
+		} );
 	}
 	onRenderOption( option ) {
 		return(

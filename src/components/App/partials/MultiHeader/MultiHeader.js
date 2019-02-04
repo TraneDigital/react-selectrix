@@ -57,7 +57,7 @@ export default class MultiHeader extends React.Component {
 
 		}
 
-		if( !settings.searchBoxInside && ( settings.searchable || tags.enabled )) {
+		if( !settings.searchBoxInside && ( settings.searchable || tags.enabled ) ) {
 			jsx.push( <Searchable key="searchable" /> );
 		}
 
