@@ -59,14 +59,17 @@ export default class App extends React.Component {
 
 	}
 
-	handleKeyDown( e ) {
-
+	handleKeyDown = ( e ) => {
 		if( ! this.props.focused ) {
 			return;
 		}
 
 		this.props.handleKeyDown( e );
 
+	}
+
+	handleFocusSelect = ( e ) => {
+		this.props.focusSelect( e );
 	}
 
 	checkIfHovered() {
@@ -157,7 +160,7 @@ export default class App extends React.Component {
 			<div
 				className={ `react-selectrix${ className }` }
 				ref={ ( ref ) => this.ref = ref }
-				onFocus={ this.props.focusSelect }
+				onFocus={ this.handleFocusSelect }
 			>
 				<input type="hidden" value={ JSON.stringify( selected ) } />
 				<div className="rs-wrapper">

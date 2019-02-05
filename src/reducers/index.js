@@ -1,4 +1,5 @@
 import { SETUP_INSTANCE, UPDATE_INSTANCE, CLOSE_SELECT, OPEN_SELECT, SELECT_ITEM, FOCUS_ITEM, CLEAR_SELECT, FOCUS_SELECT, BLUR_SELECT, SCROLL_SELECT, SEARCH_OPTIONS, UNLOCK_MOUSE_FOCUS, REMOVE_ITEM, CLEAR_SEARCH, CHECK_FOR_SCROLL, SELECT_ALL, FETCHING_OPTIONS, SETUP_AJAX_OPTIONS, CLEAR_OPTIONS, SET_QUERY_STRING, CREATE_TAG, FOCUS_TAG, SET_TAG } from 'actions';
+import React from "react";
 
 const initialState = {
 	settings: {
@@ -6,6 +7,7 @@ const initialState = {
 		placeHolderInside: true,
 		placeholder: 'Please Select',
 		appendTagPrompt: 'Create tag',
+		notFoundPrompt: 'No results match',
 		searchBoxInside: false,
 		arrow: true,
 		multiple: false,
@@ -141,6 +143,9 @@ const reducer = ( state = initialState, action ) => {
 					appendTagPrompt: action.props.appendTagPrompt
 						? action.props.appendTagPrompt
 						: state.settings.appendTagPrompt,
+					notFoundPrompt: action.props.notFoundPrompt
+						? action.props.notFoundPrompt
+						: state.settings.notFoundPrompt,
 					arrow: action.props.arrow,
 					multiple: action.props.multiple,
 					disabled: action.props.disabled,
@@ -255,7 +260,7 @@ const reducer = ( state = initialState, action ) => {
 					enabled: state.tags.enabled,
 					active: false
 				} ),
-				focused: action.blur ? false : state.focused
+				focused: action.blur ? false : state.focused,
 			} )
 		}
 
@@ -283,13 +288,13 @@ const reducer = ( state = initialState, action ) => {
 
 		case FOCUS_SELECT: {
 			return Object.assign( {}, state, {
-				focused: true
+				focused: true,
 			} )
 		}
 
 		case BLUR_SELECT: {
 			return Object.assign( {}, state, {
-				focused: false
+				focused: false,
 			} )
 		}
 

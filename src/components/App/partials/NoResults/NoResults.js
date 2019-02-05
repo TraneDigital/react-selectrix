@@ -8,14 +8,15 @@ const NoResults = ( props ) => {
 	}
 
 	return(
-		<li className="rs-no-results">No results match &quot;{ props.queryString }&quot;</li>
+		<li className="rs-no-results">{props.notFoundPrompt} &quot;{ props.queryString }&quot;</li>
 	)
 
 }
 
 NoResults.propTypes = {
 	active: PropTypes.bool.isRequired,
-	queryString: PropTypes.string
+	queryString: PropTypes.string,
+	notFoundPrompt: PropTypes.string,
 }
 
 export default NoResults;

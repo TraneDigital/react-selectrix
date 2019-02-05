@@ -104,6 +104,7 @@ Selectrix.propTypes = {
 	onChange: PropTypes.func,
 	onAppendTag: PropTypes.func,
 	appendTagPrompt: PropTypes.string,
+	notFoundPrompt: PropTypes.string,
 	customScrollbar: PropTypes.bool,
 	searchable: PropTypes.bool,
 	stayOpen: PropTypes.bool,

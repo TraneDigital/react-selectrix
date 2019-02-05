@@ -1,5 +1,5 @@
 import React from 'react';
-import Selectrix from 'components/';
+import Selectrix from 'index.js';
 
 export default class PlayGround extends React.Component {
 
@@ -85,42 +85,73 @@ export default class PlayGround extends React.Component {
 						</span>
 					}
 				</div>
-				<Selectrix
-					options={ options }
-					onChange={ this.setValue }
-					onAppendTag={ this.appendTag }
-					//appendTagPrompt="Add new item"
-					arrow={ true }
-					placeHolderInside={ false }
-					searchBoxInside={ true }
-					disabled={ false }
-					className="selectrix"
-					isOpen={ false }
-					searchable={ searchable }
-					multiple={ multiple }
-					stayOpen={ false }
-					commaSeperated={ false }
-					singleLine={ false }
-					lifo={ false }
-					searchIndex={ false }
-					selectAllButton={ true }
-					height={ 190 }
-					checkBoxes={ false }
-					materialize={ true }
-					isDropDown={ false }
-					// defaultValue={ [ 'b10', 'c', 'f' ] }
-					customKeys={ { key: 'value', label: 'label' } }
-					// ajax={{
-					// 	url: 'https://newsapi.org/v2/everything?apiKey=9342a9a707ca49c4b2da34e9ea238ea6',
-					// 	fetchOnSearch: true,
-					// 	q: '&q={q}',
-					// 	nestedKey: 'articles',
-					// 	minLength: 3
-					// }}
-					// onRenderOption={ this.onRenderOption }
-					// onRenderSelection={ this.onRenderSelection }
-					tags={ true }
-				/>
+				<div className="selectrix-wrapper">
+						<Selectrix
+							options={ options }
+							onChange={ this.setValue }
+							onAppendTag={ this.appendTag }
+							appendTagPrompt="Add new item"
+							notFoundPrompt="Unable to find"
+							arrow={ true }
+							placeHolderInside={ false }
+							searchBoxInside={ true }
+							disabled={ false }
+							className="selectrix"
+							isOpen={ false }
+							searchable={ searchable }
+							multiple={ multiple }
+							stayOpen={ false }
+							commaSeperated={ false }
+							singleLine={ false }
+							lifo={ false }
+							searchIndex={ false }
+							selectAllButton={ true }
+							height={ 190 }
+							checkBoxes={ false }
+							materialize={ true }
+							isDropDown={ false }
+							// defaultValue={ [ 'b10', 'c', 'f' ] }
+							customKeys={ { key: 'value', label: 'label' } }
+							// ajax={{
+							// 	url: 'https://newsapi.org/v2/everything?apiKey=9342a9a707ca49c4b2da34e9ea238ea6',
+							// 	fetchOnSearch: true,
+							// 	q: '&q={q}',
+							// 	nestedKey: 'articles',
+							// 	minLength: 3
+							// }}
+							// onRenderOption={ this.onRenderOption }
+							// onRenderSelection={ this.onRenderSelection }
+							tags={ true }
+						/>
+
+						<Selectrix
+							options={ options }
+							onChange={ this.setValue }
+							onAppendTag={ this.appendTag }
+							arrow={ true }
+							placeHolderInside={ false }
+							searchBoxInside={ true }
+							disabled={ false }
+							className="selectrix"
+							isOpen={ false }
+							searchable={ searchable }
+							multiple={ multiple }
+							stayOpen={ false }
+							commaSeperated={ false }
+							singleLine={ false }
+							lifo={ false }
+							searchIndex={ false }
+							selectAllButton={ true }
+							height={ 190 }
+							checkBoxes={ false }
+							materialize={ true }
+							isDropDown={ false }
+							// defaultValue={ [ 'b10', 'c', 'f' ] }
+							customKeys={ { key: 'value', label: 'label' } }
+							tags={ true }
+						/>
+
+				</div>
 			</div>
 		)
 

@@ -77,6 +77,9 @@ onRenderSelection | function / boolean | false | Use this function to render cus
 onChange | function | undefined | Use this callback to catch Select's change trigger.
 onOpen | function | undefined | Use this callback to catch Select's open trigger.
 onClose | function | undefined | Use this callback to catch Select's close trigger.
+appendTagPrompt | string | Create tag | The custom **Create tag** message.
+notFoundPrompt | string | No results match | The custom **No results match** message.
+
 
 ## Ajax prop - breakdown
 
