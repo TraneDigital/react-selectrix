@@ -180,34 +180,34 @@ export default class PlayGround extends React.Component {
 				</div>
 				<div className="selectrix-wrapper">
 					<Selectrix
-						options={ options }
-						onChange={ this.setValue }
-						onAppendTag={ this.appendTag }
-						placeholder="-Select One-"
-						inputPlaceholder="Find Item"
+						// materialize={ true }
 						appendTagPrompt={"Add \"{searchtext}\" as a new item"}
-						notFoundPrompt="Nothing was found by the text {searchtext}"
 						arrow={ true }
-						placeHolderInside={ false }
-						searchBoxInside={ true }
-						disabled={ false }
+						checkBoxes={ false }
 						className="selectrix"
-						isOpen={ false }
-						searchable={ searchable }
-						multiple={ false }
-						stayOpen={ false }
 						commaSeperated={ false }
-						singleLine={ false }
+						customKeys={ { key: 'value', label: 'label' } }
+						defaultValue={ defaultValue  }
+						disabled={ false }
+						disableStateVal={true}
+						height={ 190 }
+						inputPlaceholder="Find Item"
+						isDropDown={ false }
+						isOpen={ false }
 						lifo={ false }
+						multiple={ false }
+						notFoundPrompt="Nothing was found by the text {searchtext}"
+						onAppendTag={ this.appendTag }
+						onChange={ this.setValue }
+						options={ options }
+						placeholder="-Select One-"
+						placeHolderInside={ false }
+						searchable={ searchable }
+						searchBoxInside={ true }
 						searchIndex={ false }
 						selectAllButton={ false }
-						height={ 190 }
-						checkBoxes={ false }
-						materialize={ true }
-						isDropDown={ false }
-						defaultValue={ defaultValue  }
-						customKeys={ { key: 'value', label: 'label' } }
-						disableStateVal={true}
+						singleLine={ false }
+						stayOpen={ false }
 						// ajax={{
 						// 	url: 'https://newsapi.org/v2/everything?apiKey=9342a9a707ca49c4b2da34e9ea238ea6',
 						// 	fetchOnSearch: true,
@@ -221,32 +221,32 @@ export default class PlayGround extends React.Component {
 					/>
 
 					<Selectrix
-						options={ options }
-						onChange={ this.setValue }
-						onAppendTag={ this.appendTag }
 						arrow={ true }
-						placeholder="-My custom-"
-						inputPlaceholder="Find Item"
-						placeHolderInside={ false }
-						searchBoxInside={ true }
-						disabled={ false }
+						checkBoxes={ false }
 						className="selectrix"
-						isOpen={ false }
-						searchable={ true }
-						multiple={ multiple }
-						stayOpen={ false }
 						commaSeperated={ false }
-						singleLine={ false }
+						customKeys={ { key: 'value', label: 'label' } }
+						disabled={ false }
+						height={ 190 }
+						id="second"
+						inputPlaceholder="Find Item"
+						isDropDown={ false }
+						isOpen={ false }
 						lifo={ false }
+						materialize={ true }
+						multiple={ multiple }
+						onAppendTag={ this.appendTag }
+						onChange={ this.setValue }
+						options={ options }
+						placeholder="-My custom-"
+						placeHolderInside={ false }
+						searchable={ true }
+						searchBoxInside={ true }
 						searchIndex={ false }
 						selectAllButton={ true }
-						height={ 190 }
-						checkBoxes={ false }
-						materialize={ true }
-						isDropDown={ false }
-						customKeys={ { key: 'value', label: 'label' } }
+						singleLine={ false }
+						stayOpen={ false }
 						tags={ true }
-						id="second"
 					/>
 
 				</div>
