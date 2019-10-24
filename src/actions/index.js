@@ -629,7 +629,7 @@ export const handleKeyDown = ( e ) => {
 		case 'Enter': {
 			e.preventDefault();
 			if( state.isOpen ) {
-				if( state.focusedItem !== null ) {
+				if( state.focusedItem !== null && state.focusedItem !== 'default' ) {
 					dispatch( selectItem( state.focusedItemIndex, true ) );
 				}
 				else {
