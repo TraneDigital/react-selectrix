@@ -202,7 +202,7 @@ export default class App extends React.Component {
 								</div>
 						}
 						<SearchPrompt />
-						<ul ref={ ( ref ) => settings.searchBoxInside ? this.rsBodyRef = ref : null}>
+						{ isOpen && <ul ref={ ( ref ) => settings.searchBoxInside ? this.rsBodyRef = ref : null}>
 							{ ajax.active && ajax.fetching &&
 									<div className="rs-loader">
 										Loading...
@@ -254,7 +254,7 @@ export default class App extends React.Component {
 									</li>
 								)
 							} ) }
-						</ul>
+						</ul> }
 					</div>
 				</div>
 			</div>
